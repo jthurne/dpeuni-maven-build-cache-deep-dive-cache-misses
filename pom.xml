@@ -30,5 +30,34 @@
         <version>3.12.1</version>
       </plugin>
     </plugins>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>com.gradle</groupId>
+          <artifactId>gradle-enterprise-maven-extension</artifactId>
+          <configuration>
+            <gradleEnterprise>
+              <normalization>
+                  <runtimeClassPath>
+                    <!-- Ignore the whole file -->
+                    <ignoredFiles>
+                      <ignoredFile>build-info.properties</ignoredFile>
+                    </ignoredFiles>
+                    <!-- Or ignore specific properties in a file -->
+<!--                    <propertiesNormalizations>-->
+<!--                        <propertiesNormalization>-->
+<!--                            <path>build-info.properties</path>-->
+<!--                            <ignoredProperties>-->
+<!--                                <ignore>timestamp</ignore>-->
+<!--                            </ignoredProperties>-->
+<!--                        </propertiesNormalization>-->
+<!--                    </propertiesNormalizations>-->
+                  </runtimeClassPath>
+              </normalization>
+            </gradleEnterprise>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 </project>
