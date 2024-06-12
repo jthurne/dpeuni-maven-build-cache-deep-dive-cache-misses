@@ -4,10 +4,19 @@
   <server>
     <url>https://dpeuniversity-develocity.gradle.com</url>
   </server>
-  <!-- Uncomment this section to have the build scan capture information about goal inputs -->
-<!--  <buildScan>-->
-<!--    <capture>-->
-<!--      <goalInputFiles>true</goalInputFiles>-->
-<!--    </capture>-->
-<!--  </buildScan>-->
+  <buildScan>
+    <!-- Uncomment this section to have the build scan capture information about goal inputs -->
+    <!--    <capture>-->
+    <!--      <goalInputFiles>true</goalInputFiles>-->
+    <!--    </capture>-->
+      <tags>
+        <tag>dpeuni-maven-build-cache-deep-dive-cache-misses</tag>
+      </tags>
+      <values>
+        <value>
+          <name>Course</name>
+          <value>Maven Build Cache Deep Dive</value>
+        </value>
+      </values>
+    </buildScan>
 </gradleEnterprise>
